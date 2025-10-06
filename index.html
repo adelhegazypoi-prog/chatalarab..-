@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ماي ليدي العرب - نسخة تجريبية</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header><h1>ماي ليدي العرب — نسخة تجريبية</h1><div id="userInfo"></div></header>
+    <main>
+      <aside id="rooms"><h3>الغرف</h3><ul id="roomList"></ul><button id="createRoom">إنشاء غرفة</button><button id="openStore">متجر Master</button></aside>
+      <section id="chatSection">
+        <div id="chatHeader"></div>
+        <div id="messages"></div>
+        <div id="composer">
+          <input id="text" placeholder="اكتب رسالتك..." />
+          <input type="file" id="file" />
+          <button id="send">إرسال</button>
+        </div>
+      </section>
+      <aside id="side">
+        <div id="auth">
+          <h3>تسجيل / دخول</h3>
+          <input id="username" placeholder="اسم المستخدم" />
+          <input id="password" placeholder="كلمة المرور" type="password" />
+          <button id="btnRegister">تسجيل</button>
+          <button id="btnLogin">دخول</button>
+          <button id="btnGuest">دخول كزائر</button>
+        </div>
+        <div id="store" class="hidden">
+          <h3>متجر Master</h3>
+          <div id="products"></div>
+          <button id="closeStore">إغلاق المتجر</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
