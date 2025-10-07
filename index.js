@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // static client
-app.use('/', express.static(path.join(__dirname, '..', 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(uploadDir));
 
 // simple auth endpoints
